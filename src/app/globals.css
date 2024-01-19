@@ -3,25 +3,78 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --Primary-Crocus-Purple: #8976FD;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--font-aeonik);
+}
+.hero-text{
+  font-family: var(--font-belleza);
+}
+button{
+  font-family: var(--font-lora);
+}
+.lora{
+  font-family: var(--font-lora);
+}
+.aeonik{  
+  font-family: var(--font-aeonik);
+}
+.btn-dark{
+  /* border-radius: 38.096px; */
+  background: #010101;
+  color: #FFF;
+}
+.flip-180{
+  transform: rotateY(180deg);
+}
+.section-slider{
+  background: linear-gradient(
+    to top,
+    #EDEDED 0%,
+    #EDEDED 60%,
+    white 40%,
+    white 100%
+  );
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.carousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.blur-div{
+  border-radius: 14.678px;
+  background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.6) 100%);
+  -webkit-backdrop-filter: blur(29.97551px);
+  /* backdrop-filter: blur(29.97551px); */
+}
+
